@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JOB APPLICATION FORM</title>
+    <style>
+        fieldset{
+            background-color: burlywood;
+        }
+        .details{
+            display: flex;
+            padding-left: 400px;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .img{
+            float: right;
+            margin-right: 30px;
+        }
+        p {
+            margin: 0;
+        }
+        h1{
+            color: cadetblue;
+        }
+        table{
+            margin-left: 50px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        form{
+            
+            padding-left: 300px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        button{
+            margin-left: 600px;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>ONLINE JOB CONSULTANT(WALLMART.COM)</h1></center>
+    <hr color="black">
+    <fieldset>
+        <legend><h3>Personal Information</h3></legend>
+        <form class="img">
+            <img src="" width="130px" height="150px" style="float: right;">
+            </form>
+        <form class="details">
+            <p>First Name   : <input type="text" size="40" required></p>
+            <br>
+            <p>Last Name    : <input type="text" size="40" required></p>
+            <br>
+            <p>Age          : <input type="text" size="2" required></p>
+            <br>
+            <div>
+                <label for = "dateofbirth">Date of Birth :</label>
+                <select id="dob-day" required>
+                    <option value="" disabled selected>Day</option>
+                    <script>
+                        for (let i = 1; i <= 31; i++) {
+                            document.write(`<option value="${i}">${i}</option>`);
+                        }
+                    </script>
+                    </select>
+                <select id="dob-month" required>
+                    <option value="" disabled selected>Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <select id="dob-year" required>
+                    <option value="" disabled selected>Year</option>
+                    <!-- Generate year options from 1900 to current year -->
+                    <script>
+                        const currentYear = new Date().getFullYear();
+                        for (let i = currentYear; i >= 1900; i--) {
+                            document.write(`<option value="${i}">${i}</option>`);
+                        }
+                    </script>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="sex">Sex:</label>
+                <input type="radio" id="male" name="sex" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="sex" value="female" required>
+                <label for="female">Female</label>
+            </div>
+            <br>
+            <p>Email ID   : <input type="text" size="30" required></p>
+            <br>
+            <p>Mobile No         : <input type="text" size="20" required></p>
+            <br>
+            <p>Address 1:<input type="text" size="25" required></p>
+            <br>
+            <p>Address 2:<input type="text" size="25" required></p>
+            <br>
+            <div>
+                <label for ="state">State :</label>
+                <select id="state" required>
+                <option value="1">TamilNadu</option>
+                <option value="2">Kerala</option>
+                <option value="3">Karnataka</option>
+                <option value="4">Andhra Pradesh</option>
+            </select>
+            <label for="country">Country:</label>
+            <select id="country" required>
+                <option value="1">India</option>
+                <option value="2">Sri Lanka</option>
+                <option value="3">Australia</option>
+                <option value="4">USA</option>
+            </select>
+            </div>
+            <br>
+            <div>
+                <label for ="religion">Religion :</label>
+                <input type="radio" id="hindu" name="religion" value="hindu" required>
+                <label for="hindu">Hindu</label>
+                <input type="radio" id="muslim" name="religion" value="muslim" required>
+                <label for="muslim">Muslim</label>
+                <input type="radio" id="christian" name="religion" value="christian" required>
+                <label for="christian">Christian</label>
+            </div>
+            <hr color="black">
+        </form>
+    </fieldset>
+    <br>
+    <hr color="green">
+    <fieldset>
+        <legend><b>Qualification</b></legend>
+        <table border="1">
+            <th align="center">Examination Passed</th>
+            <th align="center">Board University</th>
+            <th align="center">Year of Completion</th>
+            <th align="center">Mode of Completion</th>
+            <th align="center">Percentage/Grade</th>
+            <tr>
+                <td>SSLC</td>
+                <td><input type="text" size="30" required></td>
+                <td><input type="text" size="30" required></td>
+                <td><input type="text" size="30" required></td>
+                <td><input type="text" size="30" required></td>
+            </tr>
+            <tr>
+                <td>Higher Secondary</td>
+                <td><input type="text" size="30"required></td>
+                <td><input type="text" size="30"required></td>
+                <td><input type="text" size="30"required></td>
+                <td><input type="text" size="30"required></td>
+            </tr>
+            <tr>
+                <td>U.G.</td>
+                <td><select id ="board"required>
+                    <option value="1">B.Sc</option>
+                    <option value="2">B.Tech</option>
+                    <option value="3">B.E</option>
+                    <option value="4">B.Com</option>
+                </td>
+                <td><input type="text" size="30"required></td>
+                <td><select id = "time"required>
+                    <option value="1">FullTime</option>
+                    <option value="1">Corres</option>
+                </td>
+                <td><input type="text" size="30"required></td>
+            </tr>
+            <td>P.G.</td>
+                <td><select id ="board"required>
+                    <option value="1">M.Sc</option>
+                    <option value="2">M.Tech</option>
+                    <option value="3">M.E</option>
+                    <option value="4">M.Com</option>
+                </td>
+                <td><input type="text" size="30"required></td>
+                <td><select id = "time">
+                    <option value="1">FullTime</option>
+                    <option value="1">Corres</option>
+                </td>
+                <td><input type="text" size="30"required></td>
+        </table>
+    </fieldset>
+    <br>
+    <hr color="black">
+    <br>
+    <fieldset>
+        <legend><b>Industrial Preference</b></legend>
+        <form>
+            <input type="checkbox" id="IT" name="IT" value="value1"><label for="IT">IT</label>
+            <input type="checkbox" id="Mechanical" name="Mechanical" value="value2"><label for="Mechanical">Mechanical</label>
+            <input type="checkbox" id="Automobile" name="Automobile" value="value3"><label for="Automobile">Automobile</label>
+            <input type="checkbox" id="Marketing" name="Marketing" value="value4"><label for="Marketing">Marketing</label> 
+            <input type="checkbox" id="R&D" name="R&D" value="value5"><label for="R&D">R&D</label>
+            <input type="checkbox" id="Chemical" name="Chemical" value="value6"><label for="Chemical">Chemical</label>
+            <input type="checkbox" id="Education" name="Education" value="value7"><label for="Education">Education</label>   
+            <input type="checkbox" id="Bio-Technolgy" name="Bio-Technolgy" value="value8"><label for="Bio-technology">Bio-Technolgy</label>
+        </form>
+    </fieldset>
+    <br>
+    <hr color="black">
+    <br>
+    <fieldset>
+        <legend><b>Location Preference</b></legend>
+        <form class="details">
+            <p>UserName   : <input type="text" size="40" required></p>
+            <br>
+            <p>Password   : <input type="text" size="40"required></p>
+            <br> 
+        </form>
+        <button type="submit">Submit</button>  
+    </fieldset>
+</body>
+</html>
